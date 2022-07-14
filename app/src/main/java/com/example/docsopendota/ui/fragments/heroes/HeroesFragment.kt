@@ -11,11 +11,12 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.docsopendota.Either
 import com.example.docsopendota.R
 import com.example.docsopendota.databinding.FragmentHeroesBinding
-import com.example.docsopendota.ui.adapter.HeroesAdapter
+import com.example.docsopendota.ui.adapters.HeroesAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HeroesFragment : Fragment(R.layout.fragment_heroes) {
+class HeroesFragment :
+    Fragment(R.layout.fragment_heroes) {
 
     private val binding by viewBinding(FragmentHeroesBinding::bind)
     private val viewModel: HeroesViewModel by viewModels()
@@ -25,11 +26,11 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init()
+        setupRecyclerview()
         setupObserves()
     }
 
-    private fun init() = with(binding.recyclerHeroes) {
+    private fun setupRecyclerview() = with(binding.recyclerHeroes) {
         layoutManager = LinearLayoutManager(requireContext())
         adapter = heroesAdapter
     }

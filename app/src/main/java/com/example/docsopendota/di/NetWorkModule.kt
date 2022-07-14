@@ -1,6 +1,6 @@
 package com.example.docsopendota.di
 
-import com.example.docsopendota.data.remote.apiservices.NetWorkClient
+import com.example.docsopendota.data.remote.NetWorkClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -9,7 +9,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object NetWorkClient {
+object NetWorkModule {
 
     @Singleton
     @Provides

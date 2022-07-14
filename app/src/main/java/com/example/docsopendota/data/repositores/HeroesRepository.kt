@@ -1,4 +1,4 @@
-package com.example.docsopendota.data.repository
+package com.example.docsopendota.data.repositores
 
 import androidx.lifecycle.liveData
 import com.example.docsopendota.Either

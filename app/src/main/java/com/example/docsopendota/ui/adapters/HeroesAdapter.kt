@@ -1,14 +1,12 @@
-package com.example.docsopendota.ui.adapter
+package com.example.docsopendota.ui.adapters
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.docsopendota.databinding.ItemHeroesBinding
 import com.example.docsopendota.models.DocsHeroesModel
-import java.util.*
 import kotlin.reflect.KFunction1
 
 class HeroesAdapter(private val itemClick: KFunction1<Int, Unit>
